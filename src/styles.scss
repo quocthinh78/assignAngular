@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+$main-color: #1da83f;
+$text-white: #fff;
+$main-black: #4f4f4f;
+@import './app/scss/header.scss';
+@import './app/scss/bredcrumb.scss';
+@import './app/scss/leader.scss';
+@import './app/scss/project.scss';
+@import '~bootstrap/scss/bootstrap';

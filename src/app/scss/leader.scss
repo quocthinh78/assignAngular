@@ -1,0 +1,86 @@
+#leader {
+    color: $main-black;
+    padding: 0 18px;
+    margin-top: 24px;
+    background: rgb(139 139 139 / 30%);
+    width: 100%;
+    .role {
+        background-color: #a49e9e;
+        padding: 8px;
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: 16px;
+        color: #fff
+    }
+    .avatar {
+        padding: 10px;
+        text-align: center;
+        img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+        p {
+            font-weight: bold;
+        }
+    }
+    .listteam {
+        .summary {
+            padding-left: 0px;
+            list-style: none;
+            border-radius: 5px;
+            li {
+                text-transform: uppercase;
+                background: #fff;
+                padding: 10px;
+                border-bottom: 1px solid #e1e1e9;
+            }
+        }
+    }
+    .center {
+        .tableContent {
+            margin-top: 20px;
+            .title {
+                padding: 10px 10px;
+                background: #6a8d9a;
+                color: $text-white;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .right {
+        .title {
+            padding: 10px 0;
+            background: #a49e9e;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            color: $text-white;
+        }
+        #accordion {
+            .card-header {
+                padding: 8px;
+                background-color: #698d9b;
+                button {
+                    color: #fff;
+                }
+            }
+            #collapseOne {
+                .card-body {
+                    .list {
+                        .name {
+                            background-color: #0066ff;
+                            padding: 7px 10px;
+                            color: $text-white;
+                        }
+                        .status {
+                            padding: 7px 10px;
+                            background: #433b3b;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

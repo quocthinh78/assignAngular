@@ -1,0 +1,13 @@
+#breadcrumb {
+    height: 48px;
+    background-color: #e9ecef;
+    ol {
+        padding: 12px 30px;
+        li {
+            a {
+                text-decoration: none;
+                color: $main-black;
+            }
+        }
+    }
+}
