@@ -14,6 +14,7 @@ import { ProjectComponent } from './components/admincontrol/project/project.comp
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import { ModalComponent } from './components/admincontrol/modal/modal.component';
+import { AddTaskComponent } from './components/admincontrol/add-task/add-task.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ModalComponent } from './components/admincontrol/modal/modal.component'
     EmployeeComponent,
     ProjectComponent,
     ModalComponent,
+    AddTaskComponent,
   ],
   imports: [
     BrowserModule,
