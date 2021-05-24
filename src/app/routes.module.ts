@@ -23,7 +23,7 @@ export const router : Routes = [
                 component : LeaderComponent
             },
             {
-                path : 'employee',
+                path : 'employee/task',
                 component : EmployeeComponent
             },
             {

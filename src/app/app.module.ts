@@ -26,13 +26,14 @@ import { ModalComponent } from './components/admincontrol/modal/modal.component'
     EmployeeComponent,
     ProjectComponent,
     ModalComponent,
-    // FormsModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     RouterModule.forRoot(router),
     NgbModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
