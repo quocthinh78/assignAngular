@@ -5,6 +5,8 @@ import { LeaderComponent } from './components/admincontrol/leader/leader.compone
 import { EmployeeComponent } from './components/admincontrol/employee/employee.component';
 import { ProjectComponent } from './components/admincontrol/project/project.component';
 import { AddTaskComponent } from './components/admincontrol/add-task/add-task.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -38,7 +40,16 @@ export const router : Routes = [
             {
                 path: "leader/project",
                 component : ProjectComponent
-            }
+            },
+            
         ]
+    },
+    {
+        path : 'register',
+        component : RegisterComponent
+    },
+    {
+        path: "login",
+        component : LoginComponent
     }
 ]

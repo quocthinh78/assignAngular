@@ -1,0 +1,34 @@
+#register,
+#login {
+    color: $main-black;
+    .box {
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding: 30px;
+        background: #f2f2f2;
+        border-radius: 7px;
+        h2 {
+            text-align: center;
+        }
+        .button {
+            .submit {
+                background: #28a745;
+                border-radius: 3px;
+                padding: 6px;
+                text-align: center;
+                color: #fff;
+            }
+        }
+        .sub {
+            margin-top: 16px;
+            span {
+                color: #007bff;
+            }
+        }
+        span {
+            color: red;
+            font-size: 13px;
+        }
+    }
+}

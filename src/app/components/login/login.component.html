@@ -1,0 +1,25 @@
+<div id="login">
+    <div class="box">
+        <h2>Login</h2>
+        <form action="" [formGroup]="LoginForm">
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="text" class="form-control" placeholder="Email" formControlName="email" [(ngModel)]="account.email">
+                <span *ngIf="LoginForm.controls.email.errors?.required && LoginForm.controls.email.dirty">Bạn cần điền email</span>
+                <span *ngIf="LoginForm.controls.email.errors?.pattern">Mật khẩu không hợp lệ</span>
+            </div>
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" placeholder="Password" formControlName="password" [(ngModel)]="account.password">
+                <span *ngIf="LoginForm.controls.password.errors?.required && LoginForm.controls.password.dirty">Bạn cần điền mật khẩu</span>
+
+            </div>
+            <div class="button">
+                <div class="submit" (click)="login()">Login</div>
+            </div>
+        </form>
+        <div class="sub">
+            Do not have an account? <span>Register</span>
+        </div>
+    </div>
+</div>

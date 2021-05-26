@@ -1,0 +1,27 @@
+<div id="register">
+    <div class="box">
+        <h2>Register</h2>
+        <form action="" [formGroup]="registerForm">
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" class="form-control" placeholder="Name" formControlName="name">
+                <span *ngIf="registerForm.controls.name.errors?.required && registerForm.controls.name.dirty">Bạn cần điền tên đăng nhập</span>
+                <span *ngIf="registerForm.controls.name.errors?.minlength">Tên đăng nhập phải hơn 6 kí tự</span>
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="text" class="form-control" placeholder="Email" formControlName="email">
+            </div>
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" placeholder="Password" formControlName="password">
+            </div>
+            <div class="button">
+                <div class="submit">Register</div>
+            </div>
+        </form>
+        <div class="sub">
+            Do you have an account? <span>Login</span>
+        </div>
+    </div>
+</div>
