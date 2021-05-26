@@ -28,6 +28,7 @@ export class HeaderComponent implements OnInit {
     }
     else {
       this.isLogin = false;
+      this.router.navigate(['/login']);
     }
   }
   auth(){
