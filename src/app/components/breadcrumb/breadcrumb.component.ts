@@ -16,7 +16,7 @@ export class BreadcrumbComponent implements OnInit {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
         // Show loading indicator
-        console.log('before' , event)
+        // console.log('before' , event)
     }
 
         if (event instanceof NavigationEnd) {

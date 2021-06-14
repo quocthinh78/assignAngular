@@ -7,8 +7,8 @@ import { ProjectComponent } from './components/admincontrol/project/project.comp
 import { AddTaskComponent } from './components/admincontrol/add-task/add-task.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-
-
+//guard
+import {AdminLeaderGuard} from './service/admin-leader.guard'
 
 
 export const router : Routes = [
@@ -27,7 +27,8 @@ export const router : Routes = [
         children : [
             {
                 path : 'leader',
-                component : LeaderComponent
+                component : LeaderComponent,
+                canActivate : [AdminLeaderGuard],
             },
             {
                 path : 'task',
@@ -39,6 +40,7 @@ export const router : Routes = [
             },
             {
                 path: "leader/project",
+                canActivate : [AdminLeaderGuard],
                 component : ProjectComponent
             },
             

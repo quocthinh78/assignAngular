@@ -11,9 +11,9 @@ export class ModalComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.date)
+ 
   }
   getValueProject(){
-    console.log(this.team , this.date , this.name)
+    
   }
 }

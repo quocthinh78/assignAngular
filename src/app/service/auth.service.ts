@@ -10,7 +10,10 @@ export class AuthService {
     public http : HttpClient
   ) { }
   login(user : any) : Observable<any>{
-    return this.http.post(this.API + 'users/login' , user);
+    return this.http.post(this.API + 'users/signIn' , user);
+  }
+  getUser() : Observable<any>{
+    return this.http.get(this.API + 'users')
   }
   
 

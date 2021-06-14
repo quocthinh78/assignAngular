@@ -17,6 +17,9 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
+            <div class="name mr-4" style="color :#fff">
+                {{name}}
+            </div>
             <div class="login" *ngIf="isLogin" (click)="auth()">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Logout</span>
