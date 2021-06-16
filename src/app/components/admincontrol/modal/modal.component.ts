@@ -14,7 +14,8 @@ export class ModalComponent implements OnInit {
   name : string = '';
   user : any = [];
   data : any = {
-    name : ''
+    name : '',
+    price : 0
   };
   constructor(
     public router: Router,

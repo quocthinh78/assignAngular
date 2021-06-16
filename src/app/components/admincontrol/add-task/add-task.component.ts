@@ -53,8 +53,9 @@ export class AddTaskComponent implements OnInit {
       this.subscription = this.TaskService.updateTask(id,this.data).subscribe(data =>{})
     }else {
       this.subscription = this.TaskService.createTask(this.data).subscribe(data =>{})
-      this.router.navigate(['/admin/task'])
     }
+    this.router.navigate(['/admin/task'])
+
   }
   ngDestroy(){
     if(this.subscription){
