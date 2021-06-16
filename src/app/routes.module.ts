@@ -39,6 +39,10 @@ export const router : Routes = [
                 component : AddTaskComponent
             },
             {
+                path : 'task/edit/:id',
+                component : AddTaskComponent
+            },
+            {
                 path: "leader/project",
                 canActivate : [AdminLeaderGuard],
                 component : ProjectComponent

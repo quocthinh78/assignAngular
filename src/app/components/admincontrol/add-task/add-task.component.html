@@ -4,11 +4,11 @@
         <form action="">
             <div class="form-group">
                 <label for="">Task Name</label>
-                <input type="text" class="form-control" placeholder="Task Name">
+                <input type="text" class="form-control" placeholder="Task Name" [(ngModel)]="data.taskName" [ngModelOptions]="{standalone: true}">
             </div>
             <div class="form-group">
-                <label for="">Task Name</label>
-                <textarea name="" id="" cols="30" class="form-control"></textarea>
+                <label for="">Description </label>
+                <textarea name="" id="" cols="30" class="form-control" [(ngModel)]="data.taskDesCription" [ngModelOptions]="{standalone: true}"></textarea>
             </div>
             <div class="row form-group">
                 <div class="col-lg-6">
@@ -17,25 +17,27 @@
                             <label>Project</label>
                         </div>
                         <div class="col-lg-7">
-                            <select name="" id="" class="form-control">
-                                <option value="">New Task</option>
-                                <option value="">New Task</option>
+                            <select name="" id="" class="form-control" [(ngModel)]="data.projectId" [ngModelOptions]="{standalone: true}">
+                                <option *ngFor="let u of project" [value]="u._id">
+                                    {{u.name}}
+                                  </option>
                             </select>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-3">
-                            <label>Assigned To</label>
+                            <label>Author</label>
                         </div>
                         <div class="col-lg-7">
-                            <select name="" id="" class="form-control">
-                                <option value="">New Task</option>
-                                <option value="">New Task</option>
+                            <select name="" id="" class="form-control" [(ngModel)]="data.authorId" [ngModelOptions]="{standalone: true}">
+                                <option *ngFor="let u of author" [value]="u._id">
+                                    {{u.lastName}}
+                                  </option>
                             </select>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <div class="row py-3">
                         <div class="col-lg-3">
                             <label>Priority</label>
@@ -55,10 +57,10 @@
                             Holding...
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </form>
-        <button class="btn btn-primary mr-2">Add</button>
+        <button class="btn btn-primary mr-2" (click)="createTask()">Save</button>
         <button class="btn btn-success" [routerLink]="['/admin/task']">Back to Task</button>
     </div>
 </div>

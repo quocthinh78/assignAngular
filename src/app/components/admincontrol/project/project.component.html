@@ -7,7 +7,7 @@
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">ID</th>
+                        <th scope="col">Stt</th>
                         <th scope="col">Name</th>
                         <th scope="col">Date of Start</th>
                         <th scope="col">Author</th>
@@ -15,18 +15,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
+                    <tr *ngFor="let p of project; index as i">
+                        <th scope=" row ">{{i + 1}}</th>
+                        <td>{{p.name}}</td>
+                        <td>{{p.createdDate}}</td>
                         <td>
-                            <button class="btn btn-primary mr-2">Sửa</button>
-                            <button class="btn btn-danger">Xoá</button>
+                            <div *ngFor="let user of p.owner">
+                                <p>{{user.lastName}}</p>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary mr-2 ">Sửa</button>
+                            <button class="btn btn-danger" (click)="deleteProject(p._id)">Xoá</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <app-modal></app-modal>
+            <app-modal (datapush)="datapush($event)"></app-modal>
         </div>
     </div>

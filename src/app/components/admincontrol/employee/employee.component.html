@@ -9,22 +9,22 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Name</th>
+                        <th scope="col">Author</th>
                         <th scope="col">Project</th>
-                        <th scope="col">Assigned To</th>
-                        <th scope="col">Status</th>
+                        <th scope="col">Date</th>
                         <th>Acion</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
+                    <tr *ngFor="let t of tasks ; index as i">
+                        <th scope="row">{{i + 1}}</th>
+                        <td>{{t.name}}</td>
+                        <td>{{t.owner.lastName}}</td>
+                        <td>{{t.project.name}}</td>
+                        <td>{{t.createdDate}}</td>
                         <td>
-                            <button class="btn btn-primary mr-2">Edit</button>
-                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-primary mr-2" [routerLink]="['/admin/task/edit' , t._id]">Edit</button>
+                            <button class="btn btn-danger" (click)="deleteTask(t._id)">Delete</button>
                         </td>
                     </tr>
                 </tbody>
